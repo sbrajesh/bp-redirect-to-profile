@@ -2,9 +2,9 @@
 /*
 Plugin Name: BP Redirect to Profile for Buddypress
 Description:Redirect user to their profile when they login
-Version: 1.1
+Version: 1.1.1
 Requires at least: BuddyPress 1.1
-Tested up to: BuddyPress 1.2+wpmu 2.9.1
+Tested up to: BuddyPress 1.2.8+WordPress 3.1
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
 Author: Brajesh Singh
 Author URI: http://buddydev.com
@@ -24,15 +24,14 @@ Last updated:16th feb 2010
 /*Add a filter to filter the redirect url for login*/
 add_filter("login_redirect","bpdev_redirect_to_profile",100,3);
 
-function bpdev_redirect_to_profile($redirect_to_calculated,$redirect_url_specified,$user)
-{
+function bpdev_redirect_to_profile($redirect_to_calculated,$redirect_url_specified,$user){
 /*if no redirect was specified,let us think ,user wants to be in wp-dashboard*/
 if(empty($redirect_to_calculated))
 	$redirect_to_calculated=admin_url();
 	
-	/*if the user is not site admin,redirect to his/her profile*/
-	if(!is_site_admin($user->user_login))
-		return bp_core_get_user_domain($user->ID );
+	/*if the user is not super admin,redirect to his/her profile*/
+	if(!is_super_admin($user->user_login))
+		return apply_filters("bpdev_login_redicrect_url",bp_core_get_user_domain($user->ID ),$user->ID);//allow top redirect at other place if they want
 	else
 		return $redirect_to_calculated; /*if site admin or not logged in,do not do anything much*/
 
