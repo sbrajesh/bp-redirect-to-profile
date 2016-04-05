@@ -3,17 +3,16 @@
 /*
   Plugin Name: BP Redirect to Profile for Buddypress
   Description:Redirect user to their profile when they login
-  Version: 1.2
+  Version: 1.2.1
   Requires at least: BuddyPress 1.1
-  Tested up to: BuddyPress 2.3.2.1
+  Tested up to: BuddyPress 2.5.1
   License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
   Author: Brajesh Singh
   Author URI: http://buddydev.com
   Plugin URI:http://buddydev.com/buddypress/bp-redirect-to-profile-plugin-redirect-users-to-their-profile-on-login-on-buddypress-sites/
-  Last updated: July 2, 2015
- */
+  */
 /* * *
-  Copyright (C) 2009-2011 Brajesh Singh(buddydev.com)
+  Copyright (C) 2009-2016 Brajesh Singh(buddydev.com)
 
   This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or  any later version.
 
@@ -27,7 +26,10 @@
 add_filter( 'login_redirect', 'bpdev_redirect_to_profile', 100, 3 );
 
 function bpdev_redirect_to_profile ( $redirect_to_calculated, $redirect_url_specified, $user ) {
-	
+
+	if ( ! $user || is_wp_error( $user ) ) {
+		return $redirect_to_calculated;
+	}
 	/* if no redirect was specified, let us assume that the user wants to be in wp-dashboard */
 	if ( empty( $redirect_to_calculated ) ) {
 	
