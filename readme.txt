@@ -3,7 +3,7 @@ Contributors: buddydev, sbrajesh
 Tags: buddypress, buddypress login, redirect,redirect to profile, buddypress login redirect
 Requires at least: BuddyPress 1.1
 Tested up to:BuddyPress 2.5.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 Redirect users to their BuddyPress profile on login.
 == Description ==
