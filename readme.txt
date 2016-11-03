@@ -5,7 +5,7 @@ Requires at least: BuddyPress 1.1
 Tested up to:BuddyPress 2.5.2
 Stable tag: 1.2.1
 
-BuddyPress Redirect to Profile is a BuddyPress plugin which redirects a user to their profile on login.
+Redirect users to their BuddyPress profile on login.
 == Description ==
 
 BuddyPress Login redirect plugin redirects user to their profile on a login, on a BuddyPress based social site.
@@ -35,6 +35,9 @@ Yes, and No both.It does not allow user to directly go to the WordPress Mu backe
 This plugin's sole purpose is to redirect users to their BuddyPress profile on login.
 
 == Changelog ==
+=== 1.2.2 ===
+Tested with BuddyPress 2.7.0
+
 === 1.2.1 ===
 Fixed a notice and tested with BuddyPress 2.5.2
 
