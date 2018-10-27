@@ -1,9 +1,9 @@
-=== BuddyPress Redirect to Profile ===
+=== BuddyPress Login Redirect to Profile===
 Contributors: buddydev, sbrajesh
-Tags: buddypress, buddypress login, redirect,redirect to profile, buddypress login redirect
-Requires at least: BuddyPress 1.1
-Tested up to:BuddyPress 2.5.2
-Stable tag: 1.2.2
+Tags: buddypress, buddypress login, redirect, redirect to profile, buddypress login redirect
+Requires at least: 4.5
+Tested up to: 4.9.8
+Stable tag: 1.2.3
 
 Redirect users to their BuddyPress profile on login.
 == Description ==
@@ -16,6 +16,7 @@ Features include:
 * Redirect all normal users to their profile on login
 * If the admin logs in from site front page, redirect him back to front page.
 * If the Site Admin logs in from site backend, i.e. using http://yoursite.com/wp-login.php, let him go to the WordPress dashboard
+* Tested with BuddyPress 3.2
 
 == Installation ==
 
@@ -31,10 +32,15 @@ Please note, The plugin must be activated network wide if you are using multisit
 
 == Frequently Asked Questions ==
 = Does It stops Users from getting inside the WordPress dashboard =
-Yes, and No both.It does not allow user to directly go to the WordPress Mu backend, but if a user manually tries to go to the WordPress backend, It does not stops it.
+Yes, and No both. It does not allow user to directly go to the WordPress backend, but if a user manually tries to go to the WordPress backend, It does not stops it.
 This plugin's sole purpose is to redirect users to their BuddyPress profile on login.
 
 == Changelog ==
+
+=== 1.2.3 ===
+ * Cleanup.
+ * Make sure it does not cause error if BuddyPress is disabled.
+
 === 1.2.2 ===
 Tested with BuddyPress 2.7.0
 
