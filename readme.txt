@@ -36,27 +36,26 @@ Yes, and No both. It does not allow user to directly go to the WordPress backend
 This plugin's sole purpose is to redirect users to their BuddyPress profile on login.
 
 == Changelog ==
-
-=== 1.2.3 ===
+= 1.2.3 =
  * Cleanup.
  * Make sure it does not cause error if BuddyPress is disabled.
 
-=== 1.2.2 ===
+= 1.2.2 =
 Tested with BuddyPress 2.7.0
 
-=== 1.2.1 ===
+= 1.2.1 =
 Fixed a notice and tested with BuddyPress 2.5.2
 
-=== 1.2 ===
+= 1.2 =
 Code cleanup and testing with BuddyPress 2.3+
 
-=== 1.1 === 
+= 1.1 =
 Support for Buddypress 1.2 added
 
-=== 1.0 ===
+= 1.0 =
 Initial release
 
 
 == Other ==
 
-For more info visit us at [BuddyDev.com](http://buddydev.com/ "The best place for all BuddyPress based plugins, themes tutorials")
+For more info visit us at [BuddyDev.com](https://buddydev.com/ "The best place for all BuddyPress based plugins, themes tutorials")
